@@ -8,12 +8,29 @@ It need a SD card or a storage device, and format storage device as ext4 type by
 
 **Note: After formatting, all data stored in the storage device will be lost**
 
+In the OS with desktop, device maybe auto mount to **/media/**
+```sh
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    1 29.1G  0 disk
+└─sda1        8:1    1 29.1G  0 part /media/pi/59EB-E8DO
+mtdblock0    31:0    0    4M  0 disk
+mmcblk0     179:0    0 29.1G  0 disk
+├─mmcblk0p1 179:1    0  256M  0 part /boot
+└─mmcblk0p2 179:2    0 28.9G  0 part /
+```
+
+Now please umount the sda1 from /media/pi/59EB-E8DO
+```sh
+sudo umount /media
+```
+
+**Note: Format storage device is not necessary, the max file size of ext4 is 16 TB, and the max file size of vfat is 4 GB, so i don't recommend using vfat**
 ```sh
 lsblk
 
 NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda           8:0    1 29.1G  0 disk
-└─sda1        8:1    1 29.1G  0 part /mnt
+└─sda1        8:1    1 29.1G  0 part
 mtdblock0    31:0    0    4M  0 disk
 mmcblk0     179:0    0 29.1G  0 disk
 ├─mmcblk0p1 179:1    0  256M  0 part /boot
@@ -47,6 +64,8 @@ Add execute permission to image-backup
 ```sh
 sudo chmod +x /mnt/image-backup
 ```
+
+## backup
 
 Start backup of Raspberry Pi OS
 
