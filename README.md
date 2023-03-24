@@ -24,7 +24,8 @@ Now please umount the sda1 from /media/pi/59EB-E8DO
 sudo umount /media
 ```
 
-**Note: Format storage device is not necessary, the max file size of ext4 is 16 TB, and the max file size of vfat is 4 GB, so i don't recommend using vfat**
+**Note: Format storage device is not necessary, the max file size of ext4 is 16 TB, and the max file size of vfat is 4 GB**
+**Note: I don't recommend using vfat, becasue the size of OS with desktop maybe over 4GB**
 ```sh
 lsblk
 
