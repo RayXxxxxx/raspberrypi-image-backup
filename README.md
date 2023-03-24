@@ -6,8 +6,6 @@ This is a script for backing up Raspberry Pi operating system, written by leomic
 
 It need a SD card or a storage device, and format storage device as ext4 type by the following command.
 
-**Note: After formatting, all data stored in the storage device will be lost**
-
 In the OS with desktop, device maybe auto mount to **/media/**
 ```sh
 NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
